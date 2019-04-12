@@ -1,0 +1,19 @@
+/*10*/
+INSERT INTO SHIPS(NAME, CLASS, LAUNCHED)
+	   VALUES('Nelson', 'Nelson', 1927),
+	   ('Rodney','Nelson',1927)
+
+INSERT INTO CLASSES(CLASS, TYPE, COUNTRY, NUMGUNS, BORE, DISPLACEMENT)
+	   VALUES('Nelson' ,'bb', 'Gt.Britain', 9, 16, 34000),
+			 ('Rodney' ,'bb', 'Gt.Britain', 9, 16, 34000);
+
+/*11*/
+DELETE FROM SHIPS
+WHERE NAME IN (SELECT SHIP
+			   FROM OUTCOMES 
+			   WHERE RESULT = 'sunk')
+
+/*12*/
+UPDATE CLASSES
+SET BORE = BORE * 2.5,
+	DISPLACEMENT = DISPLACEMENT / 1.1
