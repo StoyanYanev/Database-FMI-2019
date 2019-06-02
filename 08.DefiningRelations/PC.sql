@@ -24,7 +24,10 @@ VALUES(1, '1401', 150);
 
 /*v)*/
 ALTER TABLE Printer
-ADD type VARCHAR(6), color CHAR;
+ADD type VARCHAR(6);
+
+ALTER TABLE Printer
+ADD color CHAR DEFAULT 'n';
 
 /*g)*/
 ALTER TABLE Printer
