@@ -4,18 +4,18 @@ USE PC
 
 /*a)*/
 CREATE TABLE Product(
-	maker VARCHAR(1),
-	model VARCHAR(4),
+	maker CHAR,
+	model CHAR(4),
 	typeOfPc VARCHAR(7)
 );
 
 CREATE TABLE Printer(
 	code INT,
-	model VARCHAR(4),
+	model CHAR(4),
 	price DECIMAL(5, 2)
 );
 
-/*á)*/
+/*Ã¡)*/
 INSERT INTO Product
 VALUES('A', '1256', 'PC');
 
@@ -25,13 +25,13 @@ VALUES(1, '1401', 150);
 ALTER TABLE Printer
 ADD type VARCHAR(6), color CHAR;
 
-/*â)*/
+/*Ã¢)*/
 ALTER TABLE Printer
-ADD type VARCHAR(6), color CHAR(1);
-/*ã)*/
+ADD type VARCHAR(6), color CHAR;
+/*Ã£)*/
 ALTER TABLE Printer
 DROP COLUMN price;
-/*ä)*/
+/*Ã¤)*/
 DROP TABLE Printer;
 
 DROP TABLE Product;
