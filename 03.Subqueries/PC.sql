@@ -11,7 +11,7 @@ WHERE price >= ALL (SELECT price FROM printer)
 /*3*/
 SELECT *
 FROM laptop
-WHERE speed <= ALL (SELECT speed FROM laptop)
+WHERE speed < ALL (SELECT speed FROM laptop)
 
 /*4*/
 SELECT MODEL,PRICE
