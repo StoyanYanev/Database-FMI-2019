@@ -40,7 +40,7 @@ SELECT DISTINCT p1.model,  p2.model
 FROM  pc p1, pc p2
 WHERE p1.speed = p2.speed 
 	  AND p1.ram = p2.ram
-      AND p1.model <> p2.model
+      AND p1.model < p2.model
 
 /*6*/
 SELECT DISTINCT pr1.maker
